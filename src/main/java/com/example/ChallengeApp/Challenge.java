@@ -1,8 +1,14 @@
 package com.example.ChallengeApp;
 
-public class Challenge {
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
+public class Challenge {
+    @Id
     private  Long id;
+    @Column(name = "challengeMonth")
     private String month;
     private String description;
 
@@ -11,6 +17,11 @@ public class Challenge {
         this.month = month;
         this.description = description;
     }
+
+    public Challenge() {
+
+    }
+
 
     public Long getId() {
         return id;
